@@ -13,6 +13,12 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class User extends Resource
 {
+    use \Itsmejoshua\Novaspatiepermissions\PermissionsBasedAuthTrait;
+
+    public static $permissionsForAbilities = [
+        'all' => 'Manage users',
+    ];
+
     /**
      * The model the resource corresponds to.
      *
